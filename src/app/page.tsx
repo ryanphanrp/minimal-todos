@@ -119,7 +119,7 @@ export default function HomePage() {
 
 	return (
 		<div
-			className={`${dmSans.variable} min-h-screen  gap-8  font-[family-name:var(--font-dm-sans)] flex justify-center items-center  text-left flex-col font-medium tracking-tighter`}
+			className={`${dmSans.variable} min-h-screen gap-8 flex justify-center items-center  text-left flex-col font-medium tracking-tighter`}
 		>
 			<motion.div
 				className="w-full max-w-md flex justify-center flex-col p-8"
@@ -150,7 +150,7 @@ export default function HomePage() {
 								{editingId === todo.id ? (
 									<Input
 										value={todo.text}
-										className="border-t-0 border-r-0 border-l-0 focus-visible:outline-none focus-visible:ring-0 p-0 text-2xl"
+										className="border-t-0 border-r-0 border-l-0 focus-visible:outline-none focus-visible:ring-0 p-0 text-xl"
 										onChange={(e) => {
 											const newText = e.target.value;
 											updateTodo(todo.id, newText);
@@ -165,7 +165,7 @@ export default function HomePage() {
 									/>
 								) : (
 									<motion.span
-										className="flex-grow group relative text-2xl  overflow-clip text-ellipsis"
+										className="flex-grow group relative text-xl  overflow-clip text-ellipsis"
 										onClick={() => startEditing(todo.id)}
 										initial={false}
 										animate={{
@@ -198,7 +198,7 @@ export default function HomePage() {
 									ref={inputRef}
 									name="todo"
 									placeholder="Add a new todo"
-									className="border-t-0 border-r-0 border-l-0 focus-visible:outline-none focus-visible:ring-0 text-2xl pb-4 pr-8"
+									className="border-t-0 border-r-0 border-l-0 focus-visible:outline-none focus-visible:ring-0 text-xl pb-4 pr-8"
 									autoComplete="off"
 								/>
 								<FormLoadingIndicator />
