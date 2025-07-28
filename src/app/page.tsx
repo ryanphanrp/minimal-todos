@@ -2,7 +2,7 @@
 
 import { Loader2, Trash } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import { useActionState, useEffect, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 import { Button } from "@/components/ui/button";
@@ -10,8 +10,13 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { type TodoActionState, useTodoStore } from "@/lib/store";
 
-const dmSans = DM_Sans({
-	variable: "--font-dm-sans",
+const baseFont = JetBrains_Mono({
+	variable: "--font-base",
+	subsets: ["latin"],
+});
+
+const accentFont = DM_Sans({
+	variable: "--font-accent",
 	subsets: ["latin"],
 });
 
@@ -117,7 +122,7 @@ export default function HomePage() {
 
 	return (
 		<div
-			className={`${dmSans.variable} min-h-screen gap-8 flex justify-center items-center  text-left flex-col font-medium tracking-tighter`}
+			className={`${baseFont.variable} ${accentFont.variable} min-h-screen gap-8 flex justify-center items-center text-left flex-col font-medium tracking-tighter`}
 		>
 			<motion.div
 				className="w-full max-w-md flex justify-center flex-col p-8"
