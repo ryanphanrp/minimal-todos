@@ -86,9 +86,7 @@ export default function HomePage() {
 		setEditingId(null);
 	};
 
-	// Optimistic action handlers using React 19 patterns
 	const handleToggleTodo = async (id: number) => {
-		// Optimistic update (toggle immediately for instant feedback)
 		toggleTodo(id);
 		try {
 			// Then sync with action
