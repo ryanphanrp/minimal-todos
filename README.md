@@ -1,3 +1,3 @@
-# todo.preetsuthar.me
+# todo.ryanphan.me
 
 Minimal todo website inspired by IOS App called SyncTask
